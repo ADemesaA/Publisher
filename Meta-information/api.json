@@ -1,0 +1,859 @@
+{
+  "id": {
+    "providerName": "admin",
+    "apiName": "Publisher",
+    "version": "0.11.0"
+  },
+  "uuid": "7c85b2d5-e3b1-4c11-9f51-7d5b473ec7de",
+  "description": "This specifies a **RESTful API** for WSO2 **API Manager** - Publisher.\n\nPlease see [full swagger definition](https://raw.githubusercontent.com/wso2/carbon-apimgt/v6.0.4/components/apimgt/org.wso2.carbon.apimgt.rest.api.publisher/src/main/resources/publisher-api.yaml) of the API which is written using [swagger 2.0](http://swagger.io/) specification.\n",
+  "type": "HTTP",
+  "context": "/publisher/0.11.0",
+  "contextTemplate": "/publisher/{version}",
+  "tags": [],
+  "documents": [],
+  "lastUpdated": "Mar 28, 2019 3:27:22 PM",
+  "availableTiers": [
+    {
+      "name": "Unlimited",
+      "displayName": "Unlimited",
+      "description": "Allows unlimited requests",
+      "requestsPerMin": 2147483647,
+      "requestCount": 2147483647,
+      "unitTime": 0,
+      "timeUnit": "ms",
+      "tierPlan": "FREE",
+      "stopOnQuotaReached": true
+    }
+  ],
+  "availableSubscriptionLevelPolicies": [],
+  "uriTemplates": [
+    {
+      "uriTemplate": "/apis/{apiId}/policies/mediation",
+      "httpVerb": "POST",
+      "authType": "Any",
+      "httpVerbs": [
+        "POST",
+        "GET"
+      ],
+      "authTypes": [
+        "Any",
+        "Any"
+      ],
+      "throttlingConditions": [],
+      "throttlingTier": "Unlimited",
+      "throttlingTiers": [
+        "Unlimited",
+        "Unlimited"
+      ],
+      "mediationScript": "null",
+      "scopes": [
+        {
+          "key": "apim:api_create",
+          "name": "apim:api_create",
+          "roles": "admin",
+          "description": "",
+          "id": 321
+        },
+        {
+          "key": "apim:api_view",
+          "name": "apim:api_view",
+          "roles": "admin",
+          "description": "",
+          "id": 320
+        }
+      ],
+      "mediationScripts": {}
+    },
+    {
+      "uriTemplate": "/apis/{apiId}/documents",
+      "httpVerb": "POST",
+      "authType": "Any",
+      "httpVerbs": [
+        "POST",
+        "GET"
+      ],
+      "authTypes": [
+        "Any",
+        "Any"
+      ],
+      "throttlingConditions": [],
+      "throttlingTier": "Unlimited",
+      "throttlingTiers": [
+        "Unlimited",
+        "Unlimited"
+      ],
+      "mediationScript": "null",
+      "scopes": [
+        {
+          "key": "apim:api_create",
+          "name": "apim:api_create",
+          "roles": "admin",
+          "description": "",
+          "id": 321
+        },
+        {
+          "key": "apim:api_view",
+          "name": "apim:api_view",
+          "roles": "admin",
+          "description": "",
+          "id": 320
+        }
+      ],
+      "mediationScripts": {}
+    },
+    {
+      "uriTemplate": "/applications/{applicationId}",
+      "httpVerb": "GET",
+      "authType": "Any",
+      "httpVerbs": [
+        "GET"
+      ],
+      "authTypes": [
+        "Any"
+      ],
+      "throttlingConditions": [],
+      "throttlingTier": "Unlimited",
+      "throttlingTiers": [
+        "Unlimited"
+      ],
+      "mediationScript": "null",
+      "scopes": [
+        {
+          "key": "apim:api_create",
+          "name": "apim:api_create",
+          "roles": "admin",
+          "description": "",
+          "id": 321
+        }
+      ],
+      "mediationScripts": {}
+    },
+    {
+      "uriTemplate": "/subscriptions/block-subscription",
+      "httpVerb": "POST",
+      "authType": "Any",
+      "httpVerbs": [
+        "POST"
+      ],
+      "authTypes": [
+        "Any"
+      ],
+      "throttlingConditions": [],
+      "throttlingTier": "Unlimited",
+      "throttlingTiers": [
+        "Unlimited"
+      ],
+      "mediationScript": "null",
+      "scopes": [
+        {
+          "key": "apim:subscription_block",
+          "name": "apim:subscription_block",
+          "roles": "admin",
+          "description": "",
+          "id": 327
+        }
+      ],
+      "mediationScripts": {}
+    },
+    {
+      "uriTemplate": "/apis/{apiId}/documents/{documentId}/content",
+      "httpVerb": "POST",
+      "authType": "Any",
+      "httpVerbs": [
+        "POST",
+        "GET"
+      ],
+      "authTypes": [
+        "Any",
+        "Any"
+      ],
+      "throttlingConditions": [],
+      "throttlingTier": "Unlimited",
+      "throttlingTiers": [
+        "Unlimited",
+        "Unlimited"
+      ],
+      "mediationScript": "null",
+      "scopes": [
+        {
+          "key": "apim:api_create",
+          "name": "apim:api_create",
+          "roles": "admin",
+          "description": "",
+          "id": 321
+        },
+        {
+          "key": "apim:api_view",
+          "name": "apim:api_view",
+          "roles": "admin",
+          "description": "",
+          "id": 320
+        }
+      ],
+      "mediationScripts": {}
+    },
+    {
+      "uriTemplate": "/subscriptions/{subscriptionId}",
+      "httpVerb": "GET",
+      "authType": "Any",
+      "httpVerbs": [
+        "GET"
+      ],
+      "authTypes": [
+        "Any"
+      ],
+      "throttlingConditions": [],
+      "throttlingTier": "Unlimited",
+      "throttlingTiers": [
+        "Unlimited"
+      ],
+      "mediationScript": "null",
+      "scopes": [
+        {
+          "key": "apim:subscription_view",
+          "name": "apim:subscription_view",
+          "roles": "admin",
+          "description": "",
+          "id": 305
+        }
+      ],
+      "mediationScripts": {}
+    },
+    {
+      "uriTemplate": "/apis/{apiId}/swagger",
+      "httpVerb": "GET",
+      "authType": "Any",
+      "httpVerbs": [
+        "GET",
+        "PUT"
+      ],
+      "authTypes": [
+        "Any",
+        "Any"
+      ],
+      "throttlingConditions": [],
+      "throttlingTier": "Unlimited",
+      "throttlingTiers": [
+        "Unlimited",
+        "Unlimited"
+      ],
+      "mediationScript": "null",
+      "scopes": [
+        {
+          "key": "apim:api_view",
+          "name": "apim:api_view",
+          "roles": "admin",
+          "description": "",
+          "id": 320
+        },
+        {
+          "key": "apim:api_create",
+          "name": "apim:api_create",
+          "roles": "admin",
+          "description": "",
+          "id": 321
+        }
+      ],
+      "mediationScripts": {}
+    },
+    {
+      "uriTemplate": "/subscriptions",
+      "httpVerb": "GET",
+      "authType": "Any",
+      "httpVerbs": [
+        "GET"
+      ],
+      "authTypes": [
+        "Any"
+      ],
+      "throttlingConditions": [],
+      "throttlingTier": "Unlimited",
+      "throttlingTiers": [
+        "Unlimited"
+      ],
+      "mediationScript": "null",
+      "scopes": [
+        {
+          "key": "apim:subscription_view",
+          "name": "apim:subscription_view",
+          "roles": "admin",
+          "description": "",
+          "id": 305
+        }
+      ],
+      "mediationScripts": {}
+    },
+    {
+      "uriTemplate": "/apis",
+      "httpVerb": "POST",
+      "authType": "Any",
+      "httpVerbs": [
+        "POST",
+        "GET"
+      ],
+      "authTypes": [
+        "Any",
+        "Any"
+      ],
+      "throttlingConditions": [],
+      "throttlingTier": "Unlimited",
+      "throttlingTiers": [
+        "Unlimited",
+        "Unlimited"
+      ],
+      "mediationScript": "null",
+      "scopes": [
+        {
+          "key": "apim:api_create",
+          "name": "apim:api_create",
+          "roles": "admin",
+          "description": "",
+          "id": 321
+        },
+        {
+          "key": "apim:api_view",
+          "name": "apim:api_view",
+          "roles": "admin",
+          "description": "",
+          "id": 320
+        }
+      ],
+      "mediationScripts": {}
+    },
+    {
+      "uriTemplate": "/apis/{apiId}/thumbnail",
+      "httpVerb": "POST",
+      "authType": "Any",
+      "httpVerbs": [
+        "POST",
+        "GET"
+      ],
+      "authTypes": [
+        "Any",
+        "Any"
+      ],
+      "throttlingConditions": [],
+      "throttlingTier": "Unlimited",
+      "throttlingTiers": [
+        "Unlimited",
+        "Unlimited"
+      ],
+      "mediationScript": "null",
+      "scopes": [
+        {
+          "key": "apim:api_create",
+          "name": "apim:api_create",
+          "roles": "admin",
+          "description": "",
+          "id": 321
+        },
+        {
+          "key": "apim:api_view",
+          "name": "apim:api_view",
+          "roles": "admin",
+          "description": "",
+          "id": 320
+        }
+      ],
+      "mediationScripts": {}
+    },
+    {
+      "uriTemplate": "/apis/{apiId}/wsdl",
+      "httpVerb": "POST",
+      "authType": "Any",
+      "httpVerbs": [
+        "POST",
+        "GET"
+      ],
+      "authTypes": [
+        "Any",
+        "Any"
+      ],
+      "throttlingConditions": [],
+      "throttlingTier": "Unlimited",
+      "throttlingTiers": [
+        "Unlimited",
+        "Unlimited"
+      ],
+      "mediationScript": "null",
+      "scopes": [
+        {
+          "key": "apim:api_create",
+          "name": "apim:api_create",
+          "roles": "admin",
+          "description": "",
+          "id": 321
+        },
+        {
+          "key": "apim:api_view",
+          "name": "apim:api_view",
+          "roles": "admin",
+          "description": "",
+          "id": 320
+        }
+      ],
+      "mediationScripts": {}
+    },
+    {
+      "uriTemplate": "/workflows/update-workflow-status",
+      "httpVerb": "POST",
+      "authType": "Any",
+      "httpVerbs": [
+        "POST"
+      ],
+      "authTypes": [
+        "Any"
+      ],
+      "throttlingConditions": [],
+      "throttlingTier": "Unlimited",
+      "throttlingTiers": [
+        "Unlimited"
+      ],
+      "mediationScript": "null",
+      "scopes": [
+        {
+          "key": "apim:api_workflow",
+          "name": "apim:api_workflow",
+          "roles": "admin",
+          "description": "",
+          "id": 315
+        }
+      ],
+      "mediationScripts": {}
+    },
+    {
+      "uriTemplate": "/apis/change-lifecycle",
+      "httpVerb": "POST",
+      "authType": "Any",
+      "httpVerbs": [
+        "POST"
+      ],
+      "authTypes": [
+        "Any"
+      ],
+      "throttlingConditions": [],
+      "throttlingTier": "Unlimited",
+      "throttlingTiers": [
+        "Unlimited"
+      ],
+      "mediationScript": "null",
+      "scopes": [
+        {
+          "key": "apim:api_publish",
+          "name": "apim:api_publish",
+          "roles": "admin",
+          "description": "",
+          "id": 316
+        }
+      ],
+      "mediationScripts": {}
+    },
+    {
+      "uriTemplate": "/apis/{apiId}/documents/{documentId}",
+      "httpVerb": "GET",
+      "authType": "Any",
+      "httpVerbs": [
+        "GET",
+        "DELETE",
+        "PUT"
+      ],
+      "authTypes": [
+        "Any",
+        "Any",
+        "Any"
+      ],
+      "throttlingConditions": [],
+      "throttlingTier": "Unlimited",
+      "throttlingTiers": [
+        "Unlimited",
+        "Unlimited",
+        "Unlimited"
+      ],
+      "mediationScript": "null",
+      "scopes": [
+        {
+          "key": "apim:api_view",
+          "name": "apim:api_view",
+          "roles": "admin",
+          "description": "",
+          "id": 320
+        },
+        {
+          "key": "apim:api_create",
+          "name": "apim:api_create",
+          "roles": "admin",
+          "description": "",
+          "id": 321
+        },
+        {
+          "key": "apim:api_create",
+          "name": "apim:api_create",
+          "roles": "admin",
+          "description": "",
+          "id": 321
+        }
+      ],
+      "mediationScripts": {}
+    },
+    {
+      "uriTemplate": "/apis/{apiId}/policies/mediation/{mediationPolicyId}",
+      "httpVerb": "GET",
+      "authType": "Any",
+      "httpVerbs": [
+        "GET",
+        "DELETE",
+        "PUT"
+      ],
+      "authTypes": [
+        "Any",
+        "Any",
+        "Any"
+      ],
+      "throttlingConditions": [],
+      "throttlingTier": "Unlimited",
+      "throttlingTiers": [
+        "Unlimited",
+        "Unlimited",
+        "Unlimited"
+      ],
+      "mediationScript": "null",
+      "scopes": [
+        {
+          "key": "apim:api_view",
+          "name": "apim:api_view",
+          "roles": "admin",
+          "description": "",
+          "id": 320
+        },
+        {
+          "key": "apim:api_create",
+          "name": "apim:api_create",
+          "roles": "admin",
+          "description": "",
+          "id": 321
+        },
+        {
+          "key": "apim:api_create",
+          "name": "apim:api_create",
+          "roles": "admin",
+          "description": "",
+          "id": 321
+        }
+      ],
+      "mediationScripts": {}
+    },
+    {
+      "uriTemplate": "/tiers/{tierLevel}/{tierName}",
+      "httpVerb": "GET",
+      "authType": "Any",
+      "httpVerbs": [
+        "GET",
+        "DELETE",
+        "PUT"
+      ],
+      "authTypes": [
+        "Any",
+        "Any",
+        "Any"
+      ],
+      "throttlingConditions": [],
+      "throttlingTier": "Unlimited",
+      "throttlingTiers": [
+        "Unlimited",
+        "Unlimited",
+        "Unlimited"
+      ],
+      "mediationScript": "null",
+      "scopes": [
+        {
+          "key": "apim:tier_view",
+          "name": "apim:tier_view",
+          "roles": "admin",
+          "description": "",
+          "id": 323
+        },
+        {
+          "key": "apim:tier_manage",
+          "name": "apim:tier_manage",
+          "roles": "admin",
+          "description": "",
+          "id": 324
+        },
+        {
+          "key": "apim:tier_manage",
+          "name": "apim:tier_manage",
+          "roles": "admin",
+          "description": "",
+          "id": 324
+        }
+      ],
+      "mediationScripts": {}
+    },
+    {
+      "uriTemplate": "/policies/mediation",
+      "httpVerb": "GET",
+      "authType": "Any",
+      "httpVerbs": [
+        "GET"
+      ],
+      "authTypes": [
+        "Any"
+      ],
+      "throttlingConditions": [],
+      "throttlingTier": "Unlimited",
+      "throttlingTiers": [
+        "Unlimited"
+      ],
+      "mediationScript": "null",
+      "scopes": [
+        {
+          "key": "apim:mediation_policy_view",
+          "name": "apim:mediation_policy_view",
+          "roles": "admin",
+          "description": "",
+          "id": 326
+        }
+      ],
+      "mediationScripts": {}
+    },
+    {
+      "uriTemplate": "/subscriptions/unblock-subscription",
+      "httpVerb": "POST",
+      "authType": "Any",
+      "httpVerbs": [
+        "POST"
+      ],
+      "authTypes": [
+        "Any"
+      ],
+      "throttlingConditions": [],
+      "throttlingTier": "Unlimited",
+      "throttlingTiers": [
+        "Unlimited"
+      ],
+      "mediationScript": "null",
+      "scopes": [
+        {
+          "key": "apim:subscription_block",
+          "name": "apim:subscription_block",
+          "roles": "admin",
+          "description": "",
+          "id": 327
+        }
+      ],
+      "mediationScripts": {}
+    },
+    {
+      "uriTemplate": "/tiers/{tierLevel}",
+      "httpVerb": "POST",
+      "authType": "Any",
+      "httpVerbs": [
+        "POST",
+        "GET"
+      ],
+      "authTypes": [
+        "Any",
+        "Any"
+      ],
+      "throttlingConditions": [],
+      "throttlingTier": "Unlimited",
+      "throttlingTiers": [
+        "Unlimited",
+        "Unlimited"
+      ],
+      "mediationScript": "null",
+      "scopes": [
+        {
+          "key": "apim:tier_manage",
+          "name": "apim:tier_manage",
+          "roles": "admin",
+          "description": "",
+          "id": 324
+        },
+        {
+          "key": "apim:tier_view",
+          "name": "apim:tier_view",
+          "roles": "admin",
+          "description": "",
+          "id": 323
+        }
+      ],
+      "mediationScripts": {}
+    },
+    {
+      "uriTemplate": "/apis/{apiId}",
+      "httpVerb": "GET",
+      "authType": "Any",
+      "httpVerbs": [
+        "GET",
+        "DELETE",
+        "PUT"
+      ],
+      "authTypes": [
+        "Any",
+        "Any",
+        "Any"
+      ],
+      "throttlingConditions": [],
+      "throttlingTier": "Unlimited",
+      "throttlingTiers": [
+        "Unlimited",
+        "Unlimited",
+        "Unlimited"
+      ],
+      "mediationScript": "null",
+      "scopes": [
+        {
+          "key": "apim:api_view",
+          "name": "apim:api_view",
+          "roles": "admin",
+          "description": "",
+          "id": 320
+        },
+        {
+          "key": "apim:api_create",
+          "name": "apim:api_create",
+          "roles": "admin",
+          "description": "",
+          "id": 321
+        },
+        {
+          "key": "apim:api_create",
+          "name": "apim:api_create",
+          "roles": "admin",
+          "description": "",
+          "id": 321
+        }
+      ],
+      "mediationScripts": {}
+    },
+    {
+      "uriTemplate": "/environments",
+      "httpVerb": "GET",
+      "authType": "Any",
+      "httpVerbs": [
+        "GET"
+      ],
+      "authTypes": [
+        "Any"
+      ],
+      "throttlingConditions": [],
+      "throttlingTier": "Unlimited",
+      "throttlingTiers": [
+        "Unlimited"
+      ],
+      "mediationScript": "null",
+      "scopes": [
+        {
+          "key": "apim:api_view",
+          "name": "apim:api_view",
+          "roles": "admin",
+          "description": "",
+          "id": 320
+        }
+      ],
+      "mediationScripts": {}
+    },
+    {
+      "uriTemplate": "/apis/copy-api",
+      "httpVerb": "POST",
+      "authType": "Any",
+      "httpVerbs": [
+        "POST"
+      ],
+      "authTypes": [
+        "Any"
+      ],
+      "throttlingConditions": [],
+      "throttlingTier": "Unlimited",
+      "throttlingTiers": [
+        "Unlimited"
+      ],
+      "mediationScript": "null",
+      "scopes": [
+        {
+          "key": "apim:api_create",
+          "name": "apim:api_create",
+          "roles": "admin",
+          "description": "",
+          "id": 321
+        }
+      ],
+      "mediationScripts": {}
+    },
+    {
+      "uriTemplate": "/tiers/update-permission",
+      "httpVerb": "POST",
+      "authType": "Any",
+      "httpVerbs": [
+        "POST"
+      ],
+      "authTypes": [
+        "Any"
+      ],
+      "throttlingConditions": [],
+      "throttlingTier": "Unlimited",
+      "throttlingTiers": [
+        "Unlimited"
+      ],
+      "mediationScript": "null",
+      "scopes": [
+        {
+          "key": "apim:tier_manage",
+          "name": "apim:tier_manage",
+          "roles": "admin",
+          "description": "",
+          "id": 324
+        }
+      ],
+      "mediationScripts": {}
+    }
+  ],
+  "apiHeaderChanged": false,
+  "apiResourcePatternsChanged": false,
+  "status": "CREATED",
+  "visibility": "public",
+  "endpointSecured": false,
+  "endpointAuthDigest": false,
+  "transports": "http,https",
+  "advertiseOnly": false,
+  "corsConfiguration": {
+    "corsConfigurationEnabled": false,
+    "accessControlAllowOrigins": [
+      "*"
+    ],
+    "accessControlAllowCredentials": false,
+    "accessControlAllowHeaders": [
+      "authorization",
+      "Access-Control-Allow-Origin",
+      "Content-Type",
+      "SOAPAction"
+    ],
+    "accessControlAllowMethods": [
+      "GET",
+      "PUT",
+      "POST",
+      "DELETE",
+      "PATCH",
+      "OPTIONS"
+    ]
+  },
+  "endpointConfig": "{\"production_endpoints\":{\"url\":\"https://localhost:9443\",\"config\":null,\"template_not_supported\":false},\"endpoint_type\":\"http\"}",
+  "responseCache": "Disabled",
+  "cacheTimeout": 300,
+  "implementation": "ENDPOINT",
+  "scopes": [],
+  "isDefaultVersion": false,
+  "isPublishedDefaultVersion": false,
+  "environments": [
+    "Production and Sandbox"
+  ],
+  "createdTime": "1553808269636",
+  "additionalProperties": {},
+  "environmentList": [
+    "PRODUCTION"
+  ],
+  "accessControl": "all",
+  "rating": 0.0,
+  "isLatest": false
+}
